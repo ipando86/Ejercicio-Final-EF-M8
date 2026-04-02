@@ -1,0 +1,96 @@
+{
+  "tarjetas": [
+    {
+      "id": "1709230000000",
+      "titulo": "Configurar entorno Node.js",
+      "descripcion": "Instalar express y hbs para el Sprint 1.",
+      "prioridad": "Tarea",
+      "TAG": "Función",
+      "estado": "Testeando",
+      "fecha_creacion": "2026-02-25",
+      "fecha_inicio": "2026-02-24",
+      "fecha_fin": "2026-02-25",
+      "autor": "Admin",
+      "responsable": "Desarrollador 1"
+    },
+    {
+      "id": "1771993016487",
+      "titulo": "Crear el primer post",
+      "descripcion": "Prueba 1",
+      "prioridad": "Mejoramiento",
+      "TAG": "Función",
+      "fecha_creacion": "2026-02-25",
+      "autor": "Ignacio Pando",
+      "responsable": "Yo mismo"
+    },
+    {
+      "id": "1771993653895",
+      "titulo": "Crear el primer post",
+      "descripcion": "Prueba",
+      "prioridad": "Función",
+      "fecha_creacion": "2026-02-25",
+      "autor": "Ignacio Pando",
+      "responsable": "Yo mismo"
+    },
+    {
+      "id": "1771993915882",
+      "titulo": "Crear el primer post",
+      "descripcion": "Prueba",
+      "prioridad": "Función",
+      "fecha_creacion": "2026-02-25",
+      "autor": "Ignacio Pando",
+      "responsable": "Yo mismo"
+    },
+    {
+      "id": "1771994027800",
+      "titulo": "tercer tarea",
+      "descripcion": "3",
+      "prioridad": "Bug",
+      "fecha_creacion": "2026-02-25",
+      "autor": "Ignacio Pando",
+      "responsable": "Yo mismo"
+    },
+    {
+      "id": "1771994358276",
+      "titulo": "a",
+      "descripcion": "a",
+      "prioridad": "Tarea",
+      "fecha_creacion": "2026-02-25",
+      "autor": "a",
+      "responsable": "a"
+    },
+    {
+      "id": "1771994650001",
+      "titulo": "Segundo post",
+      "descripcion": "a",
+      "prioridad": "Función",
+      "fecha_creacion": "2026-02-25",
+      "autor": "Ignacio Pando",
+      "responsable": "Yo mismo"
+    },
+    {
+      "id": "1772057873308",
+      "titulo": "Crear el primer post",
+      "descripcion": "Hola",
+      "prioridad": "Función",
+      "estado": "Por Hacer",
+      "fecha_creacion": "2026-02-25",
+      "fecha_inicio": "2026-02-25",
+      "fecha_fin": "2026-02-25",
+      "autor": "Ignacio Pando",
+      "responsable": "Yo mismo"
+    },
+    {
+      "id": "1772057917806",
+      "titulo": "Segundo post",
+      "descripcion": "Probando funciones",
+      "prioridad": "Mejoramiento",
+      "estado": "En Curso",
+      "fecha_creacion": "2026-02-25",
+      "fecha_inicio": "2026-02-25",
+      "fecha_fin": "2026-02-25",
+      "autor": "Claudio Melo",
+      "responsable": "Ignacio Pando"
+    }
+  ]
+}

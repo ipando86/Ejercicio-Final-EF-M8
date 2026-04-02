@@ -1,0 +1,12 @@
+<div class="auth-container">
+    <h2>Crear tu cuenta</h2>
+    <form action="/api/auth/register" method="POST" class="auth-form">
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <input type="password" name="password" placeholder="Crea una contraseña" required>
+        <button type="submit" class="btn-submit btn-auth">Registrarse</button>
+    </form>
+    <div class="auth-footer">
+        <p>¿Ya tienes una cuenta? <a href="/login">Inicia sesión</a></p>
+    </div>
+</div>

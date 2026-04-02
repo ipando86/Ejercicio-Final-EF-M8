@@ -1,0 +1,41 @@
+<div class="crear-tarjeta-container">
+    <h3>Añadir Nueva Tarjeta</h3>
+    <form action="/api/tarjetas" method="POST" class="formulario-tarjeta">
+        <input type="text" name="titulo" placeholder="Título" required>
+        <textarea name="descripcion" placeholder="Descripción"></textarea>
+        <select name="prioridad">
+            <option value="Tarea">Tarea</option>
+            <option value="Bug">Bug</option>
+            <option value="Mejoramiento">Mejoramiento</option>
+        </select>
+        <input type="text" name="responsable" placeholder="Responsable">
+        <button type="submit" class="btn-submit">Crear Tarjeta</button>
+    </form>
+</div>
+
+<div class="kanban-board">
+    {{#each listas}}
+    <div class="kanban-column" data-lista-id="{{this.id}}">
+        <h2>{{this.titulo}}</h2>
+        <div class="kanban-cards">
+            {{#each this.Tarjetas}}
+                {{> card this}}
+            {{else}}
+                <p class="empty-msg">No hay tareas aquí</p>
+            {{/each}}
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+{{!-- Inline Partial para la Tarjeta --}}
+{{#*inline "card"}}
+<div class="card" draggable="true" data-tarjeta-id="{{id}}">
+    <h4>{{titulo}}</h4>
+    <p>{{descripcion}}</p>
+    <div class="card-footer">
+        <span class="badge {{prioridad}}">{{prioridad}}</span>
+        <small>Resp: {{responsable}}</small>
+    </div>
+</div>
+{{/inline}}

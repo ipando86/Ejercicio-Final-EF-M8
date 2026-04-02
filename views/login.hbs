@@ -1,0 +1,11 @@
+<div class="auth-container">
+    <h2>Iniciar Sesión en KanbanPro</h2>
+    <form action="/api/auth/login" method="POST" class="auth-form">
+        <input type="email" name="email" placeholder="Ingresa tu correo" required>
+        <input type="password" name="password" placeholder="Ingresa tu contraseña" required>
+        <button type="submit" class="btn-submit btn-auth">Ingresar</button>
+    </form>
+    <div class="auth-footer">
+        <p>¿No tienes una cuenta? <a href="/register">Regístrate aquí</a></p>
+    </div>
+</div>

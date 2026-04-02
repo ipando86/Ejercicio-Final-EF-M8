@@ -1,0 +1,141 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #0079bf; color: #172b4d; }
+
+.navbar { background: #0067a3; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; color: white; }
+.navbar a { color: white; text-decoration: none; margin-left: 15px; font-weight: bold; }
+
+/* Formulario Mobile-First */
+.crear-tarjeta-container { background: white; margin: 15px; padding: 15px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+.formulario-tarjeta { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.formulario-tarjeta input, .formulario-tarjeta select, .formulario-tarjeta textarea { padding: 8px; border: 1px solid #dfe1e6; border-radius: 4px; }
+.btn-submit { background: #5aac44; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+
+/* Tablero Kanban */
+.kanban-board { display: flex; flex-direction: column; gap: 15px; padding: 15px; overflow-x: auto; }
+
+/* En pantallas grandes (Desktop), alinear en horizontal */
+@media (min-width: 768px) {
+    .kanban-board { flex-direction: row; align-items: flex-start; }
+    .crear-tarjeta-container { max-width: 600px; margin: 15px auto; }
+}
+
+/* --- Mejoras de Prioridad y Visualización --- */
+
+/* Colores dinámicos para los badges */
+/* Nota: Esto asume que el texto dentro del badge coincide exactamente */
+.badge {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+/* Selector por contenido (si el backend envía estos strings) */
+.badge:contains("Bug"), .badge.bug { background-color: #eb5a46; } /* Rojo */
+.badge:contains("Tarea"), .badge.tarea { background-color: #61bd4f; } /* Verde */
+.badge:contains("Mejoramiento"), .badge.mejoramiento { background-color: #00c2e0; } /* Celeste */
+
+/* Mejoras en las columnas cuando están vacías o se arrastra algo */
+.kanban-cards {
+    min-height: 100px; /* Más área para soltar tarjetas */
+    transition: background-color 0.2s ease;
+}
+
+.kanban-cards.drag-over {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+/* Estilo para los mensajes de 'No hay tareas' */
+.empty-msg {
+    text-align: center;
+    color: #a5adba;
+    font-size: 0.85rem;
+    padding: 20px 0;
+    border: 2px dashed #dfe1e6;
+    border-radius: 6px;
+}
+
+/* Efecto hover en el formulario de creación */
+.formulario-tarjeta input:focus, 
+.formulario-tarjeta textarea:focus {
+    border-color: #0079bf;
+    box-shadow: 0 0 0 2px rgba(0, 121, 191, 0.2);
+    outline: none;
+}
+
+.kanban-column { background: #ebecf0; border-radius: 8px; min-width: 280px; max-width: 320px; padding: 10px; flex: 1; }
+.kanban-column h2 { font-size: 1rem; margin-bottom: 10px; padding: 0 8px; color: #172b4d; }
+.kanban-cards { min-height: 50px; }
+
+/* Tarjetas */
+.card { background: white; border-radius: 6px; padding: 10px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(9,30,66,0.25); cursor: grab; transition: opacity 0.2s ease; }
+.card.dragging { opacity: 0.5; cursor: grabbing; }
+.card:hover { background: #f4f5f7; }
+.card h4 { margin-bottom: 5px; font-size: 0.95rem; }
+.card p { font-size: 0.85rem; color: #5e6c84; margin-bottom: 8px; }
+.card-meta { display: flex; gap: 5px; margin-bottom: 8px; flex-wrap: wrap;}
+.badge { font-size: 0.7rem; padding: 3px 6px; border-radius: 3px; background: #0079bf; color: white;}
+.card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #ebecf0; padding-top: 8px; margin-top: 5px; }
+.btn-delete { background: none; border: none; cursor: pointer; color: #dc3545; }
+
+/* --- Estilos para Login y Registro --- */
+.auth-container {
+    background: white;
+    max-width: 400px;
+    margin: 60px auto; /* Centrado en la pantalla */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.auth-container h2 {
+    color: #172b4d;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-form input {
+    padding: 12px;
+    border: 2px solid #dfe1e6;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.auth-form input:focus {
+    border-color: #0079bf;
+    outline: none;
+}
+
+.btn-auth {
+    font-size: 1.1rem;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+.auth-footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ebecf0;
+}
+
+.auth-footer p {
+    color: #5e6c84;
+    font-size: 0.9rem;
+}
+
+.auth-footer a {
+    color: #0052cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
